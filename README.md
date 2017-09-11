@@ -1,17 +1,12 @@
-前言
 
 参考项目：https://github.com/small-dream/VideoRecord.git
 
---
 仿闲鱼的小视频拍摄 ，
 	
-	**增加：模拟闲鱼的ui效果**
-	
-	**改进：调用简单**
-	
-	**增加：多段录制**
-	
-	**增加：分段删除** 
+####  增加：模拟闲鱼的ui效果	
+####  改进：调用简单	
+####  增加：多段录制
+####  增加：分段删除*
 
 
 效果图
@@ -21,13 +16,13 @@
 
 使用
 ----
-```
+``` java
   compile project(':videorecord')
 ```
 
 在Application中初始化，主要指定拍摄路径：
 
-```
+``` java
         VCamera.setVideoCachePath( Environment.getExternalStorageDirectory().getAbsolutePath() + "/videoRecord/");
         // 开启log输出,ffmpeg输出到logcat
         VCamera.setDebugMode(true);
@@ -36,9 +31,9 @@
 
 ```
 
-**调用
+#### 调用
 
-```
+``` java
     /**
      *
      * @param context
@@ -49,7 +44,7 @@
 
 回调
 
-```
+``` java
   @Override
     public void onRecordFinished(final String path) {
         if (!TextUtils.isEmpty(path)) {
